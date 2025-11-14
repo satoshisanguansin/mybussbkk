@@ -1,0 +1,7 @@
+{
+  "name": "Bangkok BMA Feeder Route Explorer",
+  "description": "An interactive map and AI assistant for exploring Bangkok's BMA Feeder bus routes. Visualize routes, view stop details, and ask Gemini for real-time, location-aware information about nearby attractions and services.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

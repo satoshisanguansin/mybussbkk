@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bangkok BMA Feeder Route Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <style>
+      .leaflet-container {
+        height: 100%;
+        width: 100%;
+      }
+      /* Smooth transitions for bus markers */
+      .leaflet-marker-icon {
+        transition: transform 2s linear, opacity 0.5s ease-in-out;
+      }
+      .leaflet-bus-icon {
+        background: transparent;
+        border: none;
+      }
+      /* Keyframes for user location marker ping */
+      @keyframes ping {
+        75%, 100% {
+          transform: scale(2.5);
+          opacity: 0;
+        }
+      }
+      .animate-ping {
+        animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+      .leaflet-user-icon {
+        background: transparent;
+        border: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom/server": "https://aistudiocdn.com/react-dom@^19.2.0/server.browser.js",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "geojson": "https://aistudiocdn.com/geojson@^0.5.0",
+    "leaflet": "https://aistudiocdn.com/leaflet@^1.9.4",
+    "react-leaflet": "https://aistudiocdn.com/react-leaflet@^5.0.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
